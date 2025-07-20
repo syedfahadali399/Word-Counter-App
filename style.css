@@ -1,0 +1,156 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.input {
+  font-family: "Montserrat", sans-serif;
+  width: 200px;
+  height: 45px;
+  padding-left: .5rem;
+  box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
+  border: 0;
+  border-radius: 12px;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+  cursor: text;
+  z-index: 0;
+}
+
+.input::placeholder {
+  color: #bdbecb;
+}
+
+.input:hover {
+  box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #000;
+}
+
+.input:active {
+  transform: scale(0.95);
+}
+
+.input:focus {
+  box-shadow: 0 0 0 2.5px #2f303d;
+}
+
+button {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #725AC1;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 2px solid #725AC1;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 #725AC1;
+}
+
+button:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 #725AC1;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+.main {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.para {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 800;
+  color: cornflowerblue;
+}
+
+.main-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  font-weight: 800;
+  font-size: 44px;
+  color: #725AC1;
+  text-decoration: underline;
+  margin-bottom: 24px;
+}
+
+.show-data {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.box1 {
+  border: 2px solid black;
+  padding: 12px 12px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 24px;
+  color: white;
+  background-color: #2b2c37;
+  width: 100px;
+  height: 28px;
+}
+
+.box2 {
+  border: 2px solid black;
+  width: 274px;
+  border-radius: 16px;
+  padding: 12px 12px;
+  overflow:auto
+}
+
+.main-data {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-data {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .main-heading {
+    font-size: 36px;
+  }
+  .para {
+    font-size: 24px;
+  }
+  .main-data {
+    gap: 12px;
+  }
+  .show-data {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
